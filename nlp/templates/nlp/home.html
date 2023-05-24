@@ -2,9 +2,12 @@
 <p>Enter product name:</p>
 
 <form action="{% url 'home' %}" method="POST">
-    <input type="text" name="title">
+    <input type="text" name="product_name">
     {% csrf_token %}
     <button type="submit">Send</button>
 </form>
 
-<h1>title: {{ title }}</h1>
+<h1>Product name: {{ product_name }}</h1>
+<h1>{{ category1 }} : {{ prob1 }}%</h1>
+<h1>{{ category2 }} : {{ prob2 }}%</h1>
+<h1>{{ category3 }} : {{ prob3 }}%</h1>
