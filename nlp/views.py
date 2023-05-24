@@ -38,8 +38,8 @@ def index(request):
             'nlp/home.html'
         )
     else:
-        title = request.POST["title"]
-        categories, probs = predict(title)
+        product_name = request.POST["product_name"]
+        categories, probs = predict(product_name)
         return render(
             request,
             'nlp/home.html',
