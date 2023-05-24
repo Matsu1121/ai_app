@@ -48,6 +48,6 @@ def index(request):
              "category2":categories[1].replace('__label__', ''),
              "category3":categories[2].replace('__label__', ''), 
              "prob1":round(probs[0]*100),
-             "prob2":round(probs[0]*100),
-             "prob3":round(probs[0]*100)}
+             "prob2":round(probs[1]*100),
+             "prob3":round(probs[2]*100)}
              )
