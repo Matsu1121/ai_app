@@ -43,7 +43,7 @@ def index(request):
         return render(
             request,
             'nlp/home.html',
-            {"Product name":title,
+            {"product_name":product_name,
              "category1":categories[0].replace('__label__', ''),
              "category2":categories[1].replace('__label__', ''),
              "category3":categories[2].replace('__label__', ''), 
