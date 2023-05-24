@@ -40,6 +40,8 @@ def index(request):
     else:
         title = request.POST["title"]
         categories, probs = predict(title)
+        print(title)
+        print(categories, probs)
         return render(
             request,
             'nlp/home.html',
