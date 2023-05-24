@@ -40,7 +40,7 @@ def index(request):
     else:
         title = request.POST["title"]
         categories, probs = predict(title)
-        context = f"Product name:{title}\n{categories[0].replace('__label__', '')}{round(probs[0]*100)}%"}
+        context = f"Product name:{title}\n{categories[0].replace('__label__', '')}{round(probs[0]*100)}%"
         return render(
             request,
             'nlp/home.html',
