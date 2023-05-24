@@ -40,27 +40,14 @@ def index(request):
     else:
         title = request.POST["title"]
         categories, probs = predict(title)
-<<<<<<< HEAD
-=======
-        print(title)
-        print(categories, probs)
->>>>>>> 371e8862977b1b17e61f8662f45a8959df465fab
         return render(
             request,
             'nlp/home.html',
-            {
-                "Product name":title,
-<<<<<<< HEAD
-                "category1":categories[0].replace('__label__', ''),
-                "category2":categories[1].replace('__label__', ''),
-                "category3":categories[2].replace('__label__', ''), 
-                "prob1":{round(probs[0]*100)},
-                "prob2":{round(probs[0]*100)},
-                "prob3":{round(probs[0]*100)}
-            }
-            )
-=======
-                categories[0].replace('__label__', ''):f"{round(probs[0]*100)}%"
-            }
-            )
->>>>>>> 371e8862977b1b17e61f8662f45a8959df465fab
+            {"Product name":title,
+             "category1":categories[0].replace('__label__', ''),
+             "category2":categories[1].replace('__label__', ''),
+             "category3":categories[2].replace('__label__', ''), 
+             "prob1":round(probs[0]*100),
+             "prob2":round(probs[0]*100),
+             "prob3":round(probs[0]*100)}
+             )
